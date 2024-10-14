@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>保险企业</title>
+<link href="../css/insurance.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div class="container">
+    <div class="menu">
+        <ul>
+            <li><a href="FirstPage.html" class="active">首页</a></li>
+            <li><a href="insurance.html">保险服务</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="connectUs.html">联系我们</a></li>    
+        </ul>
+    </div>
+    <div class="content">
+        <div class="insurance-header">
+            <h1>保险服务</h1>
+            <p>为您的生活和财产提供全方位保障</p>
+        </div>
+
+        <div class="insurance-types">
+            <div class="insurance-card">
+                <h3>人寿保险</h3>
+                <p>保障您和家人的未来，提供经济安全网。我们的人寿保险计划可以根据您的需求量身定制。</p>
+                <a href="LifeInsuranceTb.html" class="learn-more">了解更多</a>
+            </div>
+            <div class="insurance-card">
+                <h3>健康保险</h3>
+                <p>全面的医疗保障，包括住院、门诊和重大疾病保障，让您无后顾之忧。</p>
+                <a href="" class="learn-more">了解更多</a>
+            </div>
+            <div class="insurance-card">
+                <h3>车险</h3>
+                <p>为您的爱车提供全面保护，包括第三者责任险、车辆损失险和附加险等。</p>
+                <a href="" class="learn-more">了解更多</a>
+            </div>
+            <div class="insurance-card">
+                <h3>财产保险</h3>
+                <p>保护您的家庭和商业财产，应对自然灾害、火灾和盗窃等风险。</p>
+                <a href="" class="learn-more">了解更多</a>
+            </div>
+            <div class="insurance-card">
+                <h3>旅游保险</h3>
+                <p>为您的旅行提供保障，包括医疗、行李丢失和旅程取消等保障。</p>
+                <a href="" class="learn-more">了解更多</a>
+            </div>
+            <div class="insurance-card">
+                <h3>商业保险</h3>
+                <p>为您的企业提供全面的风险管理解决方案，保护您的业务免受潜在损失。</p>
+                <a href="" class="learn-more">了解更多</a>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>需要专业建议？</h2>
+            <p>我们的保险专家随时为您提供个性化的保险方案，欢迎您的来电！</p>
+            <p>专家A: 0001-0001-0001</p>
+            <p>专家B: 0002-0002-0002</p>
+            <p>专家C: 0003-0003-0003</p>
+        </div>
+    </div>
+</div>
+<script>
+// 添加平滑滚动效果
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// 添加保险卡片悬停效果
+const insuranceCards = document.querySelectorAll('.insurance-card');
+
+insuranceCards.forEach(card => {
+    card.addEventListener('mouseover', function() {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 6px 12px rgba(0,0,0,0.15)';
+    });
+
+    card.addEventListener('mouseout', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+    });
+});
+
+// 添加页面加载动画
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+    
+    // 逐个显示保险卡片
+    insuranceCards.forEach((card, index) => {
+        setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, 100 * index);
+    });
+});
+
+// 初始化保险卡片样式
+insuranceCards.forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+});
+</script>
+</body>
+</html>

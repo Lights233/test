@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>保险企业</title>
+<link href="../css/connectUs.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="menu">
+        <ul>
+            <li><a href="FirstPage.html" class="active">首页</a></li>
+            <li><a href="insurance.html">保险服务</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="connectUs.html">联系我们</a></li> 
+        </ul>
+    </div>
+    <div class="content">
+        <div class="contact-header">
+            <h1>联系我们</h1>
+            <p>我们随时欢迎您的咨询，为您提供专业的保险建议</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-form">
+                <h2>给我们留言</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">客户姓名</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">电子邮箱</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">客户电话</label>
+                        <input type="text" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">留言内容</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">发送留言</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2>联系方式</h2>
+                <div class="contact-method">
+					<img src="../img/电话.png" width="40" height="40">
+                    <p>公司电话：0001-0001</p>
+                </div>
+                <div class="contact-method">
+                    <img src="../img/邮件.png" width="40" height="40">
+                    <p>公司邮箱：0001-0001@11.com</p>
+                </div>
+                <div class="contact-method">
+                    <img src="../img/地址.png" width="40" height="40">
+                    <p>公司地址：xxx市xxx区xxx街道xxx号</p>
+                </div>
+                <div class="contact-method">
+                    <img src="../img/时钟.png" width="40" height="40">
+                    <p>营业时间：9：00 - 18：00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // 这里可以添加表单验证逻辑
+    // 模拟表单提交
+    alert('感谢您的留言！我们会尽快与您联系。');
+    this.reset();
+});
+
+// 添加平滑滚动效果
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// 添加表单字段动画效果
+const formInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
+
+formInputs.forEach(input => {
+    input.addEventListener('focus', function() {
+        this.parentElement.classList.add('active');
+    });
+
+    input.addEventListener('blur', function() {
+        if (this.value === '') {
+            this.parentElement.classList.remove('active');
+        }
+    });
+});
+// 添加页面加载动画
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+});
+</script>
+</body>
+</html>

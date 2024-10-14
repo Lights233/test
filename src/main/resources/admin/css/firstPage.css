@@ -1,0 +1,108 @@
+/* CSS Document */
+body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: "Microsoft YaHei", Arial, sans-serif;
+    }
+.container {
+        display: flex;
+        height: 100%;
+    }    
+.menu {
+        width: 200px;
+        background-color: #f0f0f0;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }    
+.menu ul {
+        list-style-type: none;
+        padding: 0;
+    }    
+.menu li {
+        margin-bottom: 10px;
+    }    
+.menu a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        transition: color 0.3s ease;
+    }    
+.menu a:hover, .menu a.active {
+        color: #007bff;
+    }    
+.content {
+        flex-grow: 1;
+        padding: 20px;
+        overflow-y: auto;
+    }    
+.hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://websim.ai/images/insurance-hero.jpg');
+        background-size: cover;
+        background-position: center;
+        background: #aed6f1;
+        color: white;
+        text-align: center;
+        padding: 100px 20px;
+        margin-bottom: 40px;
+    }    
+.hero h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }    
+.hero p {
+        font-size: 1.2em;
+        max-width: 600px;
+        margin: 0 auto;
+    }    
+.cta-button {
+        display: inline-block;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1.1em;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }    
+.cta-button:hover {
+        background-color: #0056b3;
+    }    
+.features {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }    
+ .feature {
+        width: 30%;
+        min-width: 250px;
+        text-align: center;
+        margin-bottom: 20px;
+    }   
+.feature svg {
+        width: 50px;
+        height: 50px;
+        fill: #007bff;
+        margin-bottom: 10px;
+    }    
+.testimonials {
+        background-color: #f9f9f9;
+        padding: 40px 20px;
+        text-align: center;
+    }    
+.testimonial {
+        max-width: 800px;
+        margin: 0 auto 40px;
+    }    
+.testimonial:last-child {
+        margin-bottom: 0;
+    }    
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}

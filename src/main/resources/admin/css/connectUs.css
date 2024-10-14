@@ -1,0 +1,118 @@
+body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: "Microsoft YaHei", Arial, sans-serif;
+    }
+.container {
+        display: flex;
+        height: 100%;
+    }
+.menu {
+        width: 200px;
+        background-color: #f0f0f0;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+.menu ul {
+        list-style-type: none;
+        padding: 0;
+    }
+.menu li {
+        margin-bottom: 10px;
+    }
+.menu a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        transition: color 0.3s ease;
+    }
+.menu a:hover, .menu a.active {
+        color: #007bff;
+    }
+.content {
+        flex-grow: 1;
+        padding: 20px;
+        overflow-y: auto;
+    }
+.contact-header {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://websim.ai/images/contact-header.jpg');
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        padding: 100px 20px;
+        margin-bottom: 40px;
+        background: #DAF7A6;
+    }
+.contact-header h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+.contact-content {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+.contact-form {
+        flex: 1;
+        padding: 20px;
+        background-color: #DAF7A6;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+.contact-info {
+        flex: 1;
+        padding: 20px;
+        margin-left: 20px;
+    }
+.form-group {
+        margin-bottom: 20px;
+    }
+label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+input[type="text"],
+input[type="email"],
+textarea {
+        width: 95%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+textarea {
+        height: 150px;
+    }
+button {
+        background-color: #007bff;
+        color: #a6c5f7;
+        border: 1px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        background: #DAF7A6;
+    }
+button:hover {
+        background-color: #0056b3;
+    }
+.contact-method {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+.contact-method i {
+        font-size: 24px;
+        margin-right: 10px;
+        color: #007bff;
+    }
+.map-container {
+        margin-top: 20px;
+        height: 300px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
